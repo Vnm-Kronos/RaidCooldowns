@@ -60,7 +60,7 @@ local cooldowns = {
 	},
 	["SHAMAN"] = {
 		[GetSpellInfo(hero)]  = { id = hero,  cd = 300 },           -- Bloodlust/Heroism
-		[GetSpellInfo(49231)] = { id = 49231, cd = 10 },            -- Earth Shock
+		[GetSpellInfo(57994)] = { id = 57994, cd = 6 },            	-- Wind Shear
 		[GetSpellInfo(51514)] = { id = 51514, cd = 45 },            -- Hex
 		[GetSpellInfo(16190)] = { id = 16190, cd = 300 },           -- Mana Tide Totem
 		[GetSpellInfo(16188)] = { id = 16188, cd = 180 },           -- Nature's Swiftness
