@@ -63,7 +63,11 @@ end
 function base:GetCooldown(spell)
 	local remaining = 0
 	local startTime, cooldown, enabled = GetSpellCooldown(spell)
-
+	
+	if spell == "Soulstone Resurrection" then
+		startTime, cooldown, enabled = GetItemCooldown(36895)
+	end
+	
 	if startTime and startTime > 0 and cooldown >= 2 and enabled == 1 then
 		remaining = math.ceil(startTime + cooldown - GetTime())
 	end
