@@ -43,6 +43,7 @@ local cooldowns = {
 		[GetSpellInfo(48788)] = { id = 48788, cd = 1200 },          -- Lay on Hands
 		[GetSpellInfo(31821)] = { id = 31821, cd = 120 },			-- Aura Mastery
 		[GetSpellInfo(6940)]  = { id = 6940, cd = 120 },			-- Hand of Sacrifice
+		[GetSpellInfo(1038)]  = { id = 1038, cd = 120 },			-- Hand of Salvation
 	},
 	["PRIEST"] = {
 		[GetSpellInfo(64843)] = { id = 64843, cd = 480 },           -- Divine Hymn

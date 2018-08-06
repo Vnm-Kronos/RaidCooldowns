@@ -70,8 +70,9 @@ do
 end
 
 function RaidCooldowns:COMBAT_LOG_EVENT_UNFILTERED(event, _, eventType, _, srcName, _, _, dstName, _, spellId, spellName, _, ...)
-	if eventType ~= "SPELL_CAST_SUCCESS" and eventType ~= "SPELL_RESURRECT" then return end
+	if eventType ~= "SPELL_CAST_SUCCESS" and eventType ~= "SPELL_RESURRECT" and eventType ~= "SPELL_AURA_APPLIED" then return end
 	if not srcName or srcName == UnitName("player") then return end
+	if eventType == "SPELL_AURA_APPLIED" and spellId ~= 47883 then return end
 	
 	local _, c = UnitClass(srcName)
 	if self.cooldowns[c] then
